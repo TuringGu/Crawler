@@ -1,4 +1,5 @@
 # In Windows it has a problem, better running in Linux
+# https://stackoverflow.com/questions/50379009/python-multiprocessing-semaphore-not-working#
 from multiprocessing import Process, Semaphore, Lock, Queue
 import time
 
