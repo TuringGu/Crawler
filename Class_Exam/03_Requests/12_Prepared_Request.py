@@ -3,7 +3,7 @@ from requests import Request, Session
 url = 'http://httpbin.org/post'
 
 # Debug: 
-# 1. tranlate to byte to solve the problem
+# 1. tranlate to byte to solve this problem
 # 2. Restart the environment
 # TypeError: a bytes-like object is required, not 'str'
 data = {'name': 'TuringGu'}   
