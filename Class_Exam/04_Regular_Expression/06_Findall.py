@@ -1,14 +1,5 @@
 import re
 
-# Test 1
-content = 'Extra strings Hello 1234567 World_This is a Regex Demo Extra string'
-# result = re.match('Hello.*?(\d+).*?Demo', content)
-result1 = re.search('Hello.*?(\d+).*?Demo', content)
-
-print('\n\nresult1:')
-print(result1)
-
-
 # Test 2
 html = '''
 <div id="song-list">
@@ -33,9 +24,9 @@ html = '''
 </div>
 '''
 
-# result2 = re.search('<li.*?active.*?singer="(.*?)">(.*?)</a>', html, re.S)
-# result2 = re.search('<li.*?singer="(.*?)">(.*?)</a>', html, re.S)
-result2 = re.search('<li.*?singer="(.*?)">(.*?)</a>', html)
-print('\n\nresult2:')
-if result2:
-    print(result2.group(1), result2.group(2))
+results = re.findall('<li.*?href="(.*?)".*?singer="(.*?)">(.*?)</a>', html, re.S)
+print(results)
+print(type(results))
+for result in results:
+    print(result)
+    print(result[0], result[1], result[2])

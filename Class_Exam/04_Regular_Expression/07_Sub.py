@@ -1,15 +1,5 @@
 import re
 
-# Test 1
-content = 'Extra strings Hello 1234567 World_This is a Regex Demo Extra string'
-# result = re.match('Hello.*?(\d+).*?Demo', content)
-result1 = re.search('Hello.*?(\d+).*?Demo', content)
-
-print('\n\nresult1:')
-print(result1)
-
-
-# Test 2
 html = '''
 <div id="song-list">
     <h2 class="title">经典老歌</h2>
@@ -33,9 +23,20 @@ html = '''
 </div>
 '''
 
-# result2 = re.search('<li.*?active.*?singer="(.*?)">(.*?)</a>', html, re.S)
-# result2 = re.search('<li.*?singer="(.*?)">(.*?)</a>', html, re.S)
-result2 = re.search('<li.*?singer="(.*?)">(.*?)</a>', html)
-print('\n\nresult2:')
-if result2:
-    print(result2.group(1), result2.group(2))
+
+content1 = '54aK54yr5oiR54ix5L2g'
+content1 = re.sub('\d+', '', content1)
+print(content1)
+
+# Original
+results1 = re.findall('<li.*?>\s*?(<a.*?>)?(\w+)(</a>)?\s*?</li>', html, re.S)
+for result1 in results1:
+    print(result1[1])
+
+# Using Sub
+html1 = re.sub('<a.*?>|</a>', '', html)
+print('\n\n')
+print(html1)
+results2 = re.findall('<li.*?>(.*?)</li>', html1, re.S)
+for result2 in results2:
+    print(result2.strip())
