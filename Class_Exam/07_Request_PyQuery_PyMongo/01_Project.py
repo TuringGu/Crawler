@@ -103,6 +103,7 @@ def save_data(data):
     }, upsert=True)
 ####################################################
 
+
 # The Main Function
 def main(page):
     index_html = scrape_index(page)
@@ -114,7 +115,10 @@ def main(page):
         logging.info('saving data to mongodb')
         save_data(data)
         logging.info('data saved successfully')
+####################################################
 
+
+# Multi-Processing Pool
 if __name__ == '__main__':
     pool = multiprocessing.Pool()
     pages = range(1, TOTAL_PAGE + 1)
