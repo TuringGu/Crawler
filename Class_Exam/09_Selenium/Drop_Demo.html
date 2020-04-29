@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>可放置小部件（Droppable Widget）演示</title>
+  <link rel="stylesheet" href="https://apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <style>
+  #draggable {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+  }
+  #droppable {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 125px;
+    height: 125px;
+    background: #999;
+    color: #fff;
+    padding: 10px;
+  }
+  </style>
+  <script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+<body>
+ 
+<div id="droppable">请放置到这里！</div>
+<div id="draggable">请拖拽我！</div>
+ 
+<script>
+$( "#draggable" ).draggable();
+$( "#droppable" ).droppable({
+  drop: function() {
+    alert( "dropped" );
+  }
+});
+</script>
+ 
+</body>
+</html>
