@@ -2,12 +2,12 @@ import requests
 
 proxies1 = {
     'http': 'http://127.0.0.1:1080',
-    'https': 'http://127.0.0.1:1080'
+    'https': 'https://127.0.0.1:1080'
 }
 
 proxies2 = {
     'http': 'http://user:password@127.0.0.1:1080/',
-    'https': 'http://user:password@127.0.0.1:1080/'
+    'https': 'https://user:password@127.0.0.1:1080/'
 }
 
 proxies3 = {
@@ -16,5 +16,5 @@ proxies3 = {
 }
 
 
-r1 = requests.get('https://httpbin.org/get', proxies=proxies3)
+r1 = requests.get('https://httpbin.org/get', proxies=proxies1)
 print(r1.text)
