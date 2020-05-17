@@ -1,4 +1,5 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\py3.8.0\\python.exe"
+    //"python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\py3.8.0\\python.exe"
     // "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\proxypool_py3\\python.exe"
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\ml_py3.7\\python.exe"
 }
