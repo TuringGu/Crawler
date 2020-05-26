@@ -1,2 +1,6 @@
-# npm init
-# npm install --save-dev javascript-obfuscator
+# Init
+`npm init`
+`npm install --save-dev javascript-obfuscator`
+
+# Run
+`node xxx.js`
