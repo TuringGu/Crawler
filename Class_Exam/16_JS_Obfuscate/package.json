@@ -1,0 +1,17 @@
+{
+  "name": "16_js_obfuscate",
+  "version": "1.0.0",
+  "description": "test20200526",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crawler"
+  ],
+  "author": "TuringGu",
+  "license": "ISC",
+  "devDependencies": {
+    "javascript-obfuscator": "^0.28.2"
+  }
+}

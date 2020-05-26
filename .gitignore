@@ -126,3 +126,6 @@ dmypy.json
 
 # Ignore all the .zip file
 *.zip
+
+# Ignore npm build package
+Class_Exam/16_JS_Obfuscate/node_modules
